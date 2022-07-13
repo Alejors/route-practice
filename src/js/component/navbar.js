@@ -3,15 +3,79 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div className="container px-5">
+				<Link className="navbar-brand" to="/">
+					Start Bootstrap
 				</Link>
+				<button className="navbar-toggler" type="button" data-bs-toggle="collapse"	data-bs-target="#navbarSupportedContent">
+					<span className="navbar-toggler-icon" />
+				</button>
+				<div className="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li className="nav-item">
+							<Link exact className="nav-link" to="/">
+								Home
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link exact className="nav-link" to="/about">
+								About
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/contact">
+								Contact
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/pricing">
+								Pricing
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link className="nav-link" to="/faq">
+								FAQ
+							</Link>
+						</li>
+						<li className="nav-item dropdown">
+							<Link className="nav-link dropdown-toggle" to="#" role="button"	data-bs-toggle="dropdown">
+								Blog
+							</Link>
+							<ul	className="dropdown-menu dropdown-menu-end">
+								<li>
+									<Link className="dropdown-item" to="/blog/home">
+										Blog Home
+									</Link>
+								</li>
+								<li>
+									<Link className="dropdown-item" to="/blog/post">
+										Blog Post
+									</Link>
+								</li>
+							</ul>
+						</li>
+						<li className="nav-item dropdown">
+							<Link className="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown">
+								Portfolio
+							</Link>
+							<ul className="dropdown-menu dropdown-menu-end">
+								<li>
+									<Link className="dropdown-item" to="/portfolio/overview">
+										Portfolio Overview
+									</Link>
+								</li>
+								<li>
+									<Link className="dropdown-item" to="/portfolio/item">
+										Portfolio Item
+									</Link>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
+
 	);
 };
